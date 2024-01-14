@@ -37,4 +37,12 @@ jobs:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
         aws-region: us-east-1  
- 
+    - name: Configurar o KubeConfig
+      run: aws eks update-kubeconfig --name testeNT-eks --region us-east-1
+    - name: Deploy to Kubernetes cluster
+      uses: Azure/k8s-deploy@v4.9
+      with:
+        manifests: |
+          ./conversao-temperatura/k8s/deployment.yaml
+        images: | 
+          niltonpita/conversao-temperatura:${{ github.run_number }}
