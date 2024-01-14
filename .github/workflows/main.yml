@@ -17,12 +17,12 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USR }}
           password: ${{ secrets.DOCKERHUB_PWD }}
       
-      - name: Docker build  
-        uses: docker/build-push-action@v5.0.0
+      - name: Docker build 
+        uses: docker/build-push-action@v4.1.1
         with: 
           context: ./src
           file: ./src/Dockerfile
           push: true
           tags: |
-            niltonpita/conversao-temperatura:v${{ github.run_number }}
-            niltonpita/conversao-temperatura:latest
+            fabricioveronez/conversao-temperatura:v${{ github.run_number }}
+            fabricioveronez/conversao-temperatura:latest
