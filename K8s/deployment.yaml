@@ -57,7 +57,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: niltonpita/conversao-temperatura:{{TAG}}
+          image: fabricioveronez/live-kube-news:{{TAG}}
           ports:
           - containerPort: 8080
           env:
