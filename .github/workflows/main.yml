@@ -43,6 +43,6 @@ jobs:
       uses: Azure/k8s-deploy@v4.9
       with:
         manifests: |
-          ./conversao-temperatura/k8s/deployment.yaml
+          ./k8s/deployment.yaml
         images: | 
           niltonpita/conversao-temperatura:${{ github.run_number }}
