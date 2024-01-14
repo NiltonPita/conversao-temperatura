@@ -25,3 +25,11 @@ jobs:
         tags: |
           niltonpita/kube-news:${{github.run_number}}
           niltonpita/kube-news:latest
+  CD:
+    runs-on: ubuntu-latest
+    needs: [CI]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Passo 01
+      run: echo "Deploy da aplicação"
