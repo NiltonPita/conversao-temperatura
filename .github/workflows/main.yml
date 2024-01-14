@@ -42,7 +42,7 @@ jobs:
     - name: Deploy to Kubernetes cluster
       uses: Azure/k8s-deploy@v4.9
       with:
-        manifests: |
-          ./k8s/deployment.yaml
-        images: | 
+       manifests: |
+          ./K8s/deployment.yaml
+       images: | 
           niltonpita/conversao-temperatura:${{ github.run_number }}
