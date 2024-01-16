@@ -24,5 +24,5 @@ jobs:
           file: ./src/Dockerfile
           push: true
           tags: |
-            fabricioveronez/conversao-temperatura:v${{ github.run_number }}
-            fabricioveronez/conversao-temperatura:latest
+            niltonpita/kube-news:v${{ github.run_number }}
+            niltonpita/kube-news:latest
